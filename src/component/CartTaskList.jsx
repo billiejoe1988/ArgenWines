@@ -1,13 +1,14 @@
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { StyleSheet, Text, View, Button, Switch } from 'react-native';
 import React from 'react';
 
-const CartTaskList = ({ onHandlerModalDelete, item }) => {
+const CartTaskList = ({ onHandlerModalDelete, item, taskComplete }) => {
   return (
     <View style={styles.taskCard}>
       <View style={styles.textContainer}>
         <Text style={styles.text}>{item.title}</Text>
         <Text style={styles.text2}>{item.description}</Text>
         <Text style={styles.text2}>{item.createdAt.toLocaleString()}</Text>
+        <Switch value={item.complete} onValueChange={() => taskComplete(item.id)} />
       </View>
       <Button style={styles.buttons} title=' - ' onPress={() => onHandlerModalDelete(item)} color="#808080" />
     </View>

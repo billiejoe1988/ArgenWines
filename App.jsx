@@ -17,6 +17,7 @@ const App = () => {
       id: uuid.v4(),
       createdAt: new Date(),
       updatedAt: new Date().toLocaleString(),
+      completed: false,
       title: taskTitle,
       description: taskDescription,
     };
@@ -26,6 +27,13 @@ const App = () => {
     setTaskDescription('');
   };
 
+  const taskComplete = (id) => {
+    setTasks(tasks.map(task => {
+      if (task.id === id) return { ...task, completed: true };
+      return task;
+    }));
+  };
+  
   const onHandlerTitle = (t) => {
     setTaskTitle(t);
   };
@@ -56,6 +64,7 @@ const App = () => {
       <Flate
         tasks={tasks}
         onHandlerModalDelete={onHandlerModalDelete}
+        taskComplete={taskComplete}
       />
       <ModalDeleteTask
         modalVisible={modalVisible}

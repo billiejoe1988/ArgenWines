@@ -12,6 +12,7 @@ const Flate = ({ tasks, onHandlerModalDelete }) => {
           <CartTaskList 
             onHandlerModalDelete={onHandlerModalDelete}
             item={item}
+            taskComplete={taskComplete}
           />
         )}
       />
