@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, View, FlatList, Text, Button } from 'react-native';
 import CartTaskList from './CartTaskList';
 
-const Flate = ({ tasks, onHandlerModalDelete }) => {
+const Flate = ({ tasks, onHandlerModalDelete, taskComplete }) => {
   return (
     <View style={styles.tasksContainer}>
       <FlatList

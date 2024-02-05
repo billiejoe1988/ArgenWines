@@ -8,9 +8,11 @@ const CartTaskList = ({ onHandlerModalDelete, item, taskComplete }) => {
         <Text style={styles.text}>{item.title}</Text>
         <Text style={styles.text2}>{item.description}</Text>
         <Text style={styles.text2}>{item.createdAt.toLocaleString()}</Text>
-        <Switch value={item.complete} onValueChange={() => taskComplete(item.id)} />
       </View>
-      <Button style={styles.buttons} title=' - ' onPress={() => onHandlerModalDelete(item)} color="#808080" />
+      <View style={styles.actionsContainer}>
+        <Switch value={item.completed} onValueChange={() => taskComplete(item.id)} />
+        <Button title=" - " onPress={() => onHandlerModalDelete(item)} color={808080}/>
+      </View>
     </View>
   );
 };
@@ -28,16 +30,16 @@ const styles = StyleSheet.create({
   },
   textContainer: {
     flex: 1,
-    alignSelf: 'flex-start', 
+  },
+  actionsContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
   },
   text: {
     fontSize: 20,
   },
   text2: {
     fontSize: 12,
-  },
-  buttons: {
-    alignSelf: 'flex-end', 
   },
 });
 

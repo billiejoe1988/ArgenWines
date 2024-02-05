@@ -29,7 +29,7 @@ const App = () => {
 
   const taskComplete = (id) => {
     setTasks(tasks.map(task => {
-      if (task.id === id) return { ...task, completed: true };
+      if (task.id === id) return { ...task, ...{completed: !task.completed }};
       return task;
     }));
   };
