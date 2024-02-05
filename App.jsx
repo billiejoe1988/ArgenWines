@@ -15,7 +15,7 @@ const App = () => {
   const addTask = () => {
     const newTask = {
       id: uuid.v4(),
-      createdAt: new Date().toLocaleString(),
+      createdAt: new Date(),
       updatedAt: new Date().toLocaleString(),
       title: taskTitle,
       description: taskDescription,
