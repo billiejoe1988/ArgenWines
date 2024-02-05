@@ -6,7 +6,7 @@ const CartTaskList = ({ onHandlerModalDelete, item }) => {
     <View style={styles.taskCard}>
       <Text style={styles.text}>{item.title}</Text>
       <Text style={styles.text2}>{item.description}</Text>
-      <Button style={styles.buttons} title='DEL' onPress={() => onHandlerModalDelete(item)} color="#808080" />
+      <Button style={styles.buttons} title=' - ' onPress={() => onHandlerModalDelete(item)} color="#808080" />
     </View>
   );
 };

@@ -6,7 +6,7 @@ const AddTask = ({taskTitle, onHandlerTitle, taskDescription, onHandlerDescripti
     <View style={styles.inputContainer}>
         <TextInput value={taskTitle} onChangeText={onHandlerTitle} placeholder='Insert Title' style={styles.textInput1} />
         <TextInput value={taskDescription} onChangeText={onHandlerDescription} placeholder='Insert Description' style={styles.textInput2} />
-        <Button style={styles.buttonAdd} color="#613396" title='ADD' onPress={addTask} />
+        <Button style={styles.buttonAdd} color="#613396" title=' + ' onPress={addTask} />
    </View>
   )
 }

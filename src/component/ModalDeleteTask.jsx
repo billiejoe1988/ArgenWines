@@ -12,8 +12,8 @@ const ModalDeleteTask = ({taskSelected, deleteTask, modalVisible, setModalVisibl
         <View style={styles.modalContent}>
         <Text  >Are you sure you want to delete this item? {taskSelected.title} </Text>
         <View style={styles.modalButtonsContainer}>
-            <Button style={styles.modalButton} title='Yes' onPress={deleteTask} color="#7C43BD" />
-            <Button style={styles.modalButton} title='No' onPress={() => setModalVisible(false)} color="#7C43BD" />
+            <Button style={styles.modalButton} title='Delete' onPress={deleteTask} color="#7C43BD" />
+            <Button style={styles.modalButton} title='Back' onPress={() => setModalVisible(false)} color="#7C43BD" />
         </View>
         </View>
     </Modal>
