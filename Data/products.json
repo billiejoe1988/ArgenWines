@@ -1,0 +1,302 @@
+[
+    {
+        "id": 0,
+        "title": "Mar del Plata Sauvignon Blanc",
+        "description": "Crisp y vibrante, con notas herbáceas y cítricas, perfecto para acompañar mariscos frescos y platos ligeros",
+        "price": 24,
+        "discountPercentage": 8,
+        "rating": 4.2,
+        "stock": 190,
+        "brand": "Bodega Mar del Plata",
+        "category": "sauvignonBlanc",
+        "thumbnail": "https://vinosargentinos.com/wp-content/uploads/2022/06/mar_del_plata_sauvignon_blanc.jpg",
+        "images": [
+            "https://vinosargentinos.com/wp-content/uploads/2022/06/mar_del_plata_sauvignon_blanc.jpg"
+        ]
+    },
+    {
+        "id": 1,
+        "title": "Toro Viejo",
+        "description": "Alto en taninos, retrogusto a madera y chocolate, reposado en barrica de roble",
+        "price": 21,
+        "discountPercentage": 8.84,
+        "rating": 3.1,
+        "stock": 221,
+        "brand": "Sabores de mi tierra",
+        "category": "malbec",
+        "thumbnail": "https://toro.com.ar/wp-content/uploads/2022/05/centenario_malbec.jpg",
+        "images": [
+            "https://toro.com.ar/wp-content/uploads/2022/05/centenario_malbec.jpg"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Don Bonarda",
+        "description": "Intenso y frutado, con notas de ciruela y especias, perfecto para acompañar carnes rojas",
+        "price": 18,
+        "discountPercentage": 5.75,
+        "rating": 3.8,
+        "stock": 185,
+        "brand": "Vinos del Valle",
+        "category": "bonarda",
+        "thumbnail": "https://vinosargentinos.com/wp-content/uploads/2022/03/don_bonarda.jpg",
+        "images": [
+            "https://vinosargentinos.com/wp-content/uploads/2022/03/don_bonarda.jpg"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Aromas del Norte",
+        "description": "Fresco y afrutado, con toques cítricos y florales, ideal para mariscos y pescados",
+        "price": 25,
+        "discountPercentage": 10.2,
+        "rating": 4.5,
+        "stock": 150,
+        "brand": "Bodegas Andinas",
+        "category": "torrontes",
+        "thumbnail": "https://vinosargentinos.com/wp-content/uploads/2022/06/aromas_del_norte_torrontes.jpg",
+        "images": [
+            "https://vinosargentinos.com/wp-content/uploads/2022/06/aromas_del_norte_torrontes.jpg"
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Montaña Roja",
+        "description": "Elegante y estructurado, con aromas a frutos negros y notas de cedro, perfecto para platos de carne",
+        "price": 30,
+        "discountPercentage": 12,
+        "rating": 4.2,
+        "stock": 198,
+        "brand": "Bodega del Valle",
+        "category": "cabernetSauvignon",
+        "thumbnail": "https://vinosargentinos.com/wp-content/uploads/2022/09/montana_roja_cabernet_sauvignon.jpg",
+        "images": [
+            "https://vinosargentinos.com/wp-content/uploads/2022/09/montana_roja_cabernet_sauvignon.jpg"
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Valle de los Cerezos",
+        "description": "Suave y sedoso, con notas de cereza y vainilla, marida perfectamente con pastas y quesos suaves",
+        "price": 22,
+        "discountPercentage": 7.5,
+        "rating": 3.9,
+        "stock": 210,
+        "brand": "Bodega Aurora",
+        "category": "merlot",
+        "thumbnail": "https://vinosargentinos.com/wp-content/uploads/2022/07/valle_de_los_cerezos_merlot.jpg",
+        "images": [
+            "https://vinosargentinos.com/wp-content/uploads/2022/07/valle_de_los_cerezos_merlot.jpg"
+        ]
+    },
+    {
+        "id": 6,
+        "title": "Bosque Encantado",
+        "description": "Delicado y afrutado, con sutiles notas de frambuesa y regaliz, perfecto para ocasiones especiales",
+        "price": 28,
+        "discountPercentage": 9.3,
+        "rating": 4.1,
+        "stock": 175,
+        "brand": "Viñedos del Sur",
+        "category": "pinotNoir",
+        "thumbnail": "https://vinosargentinos.com/wp-content/uploads/2022/11/bosque_encantado_pinot_noir.jpg",
+        "images": [
+            "https://vinosargentinos.com/wp-content/uploads/2022/11/bosque_encantado_pinot_noir.jpg"
+        ]
+    },
+    {
+        "id": 7,
+        "title": "Luna Roja",
+        "description": "Intenso y especiado, con toques de pimienta negra y chocolate, excelente opción para asados y platos condimentados",
+        "price": 24,
+        "discountPercentage": 8.2,
+        "rating": 4.0,
+        "stock": 190,
+        "brand": "Bodegas Lunares",
+        "category": "syrah",
+        "thumbnail": "https://vinosargentinos.com/wp-content/uploads/2022/04/luna_roja_syrah.jpg",
+        "images": [
+            "https://vinosargentinos.com/wp-content/uploads/2022/04/luna_roja_syrah.jpg"
+        ]
+    },
+    {
+        "id": 8,
+        "title": "Tannat del Litoral",
+        "description": "Robusto y estructurado, con taninos firmes y notas a frutos del bosque, perfecto para carnes a la parrilla",
+        "price": 32,
+        "discountPercentage": 10.8,
+        "rating": 4.3,
+        "stock": 180,
+        "brand": "Bodega Costera",
+        "category": "tannat",
+        "thumbnail": "https://vinosargentinos.com/wp-content/uploads/2022/08/tannat_del_litoral.jpg",
+        "images": [
+            "https://vinosargentinos.com/wp-content/uploads/2022/08/tannat_del_litoral.jpg"
+        ]
+    },
+    {
+        "id": 9,
+        "title": "Chardonnay Clásico",
+        "description": "Fresco y aromático, con notas de manzana y piña, ideal para acompañar platos de aves y pescados",
+        "price": 20,
+        "discountPercentage": 6.5,
+        "rating": 3.7,
+        "stock": 195,
+        "brand": "Viñedos del Este",
+        "category": "chardonnay",
+        "thumbnail": "https://vinosargentinos.com/wp-content/uploads/2022/02/chardonnay_clasico.jpg",
+        "images": [
+            "https://vinosargentinos.com/wp-content/uploads/2022/02/chardonnay_clasico.jpg"
+        ]
+    },
+    {
+        "id": 10,
+        "title": "Sauvignon Blanc del Sur",
+        "description": "Refrescante y cítrico, con toques herbáceos y mineralidad, perfecto como aperitivo o para maridar con mariscos",
+        "price": 26,
+        "discountPercentage": 9,
+        "rating": 4.4,
+        "stock": 175,
+        "brand": "Bodegas del Sur",
+        "category": "sauvignonBlanc",
+        "thumbnail": "https://vinosargentinos.com/wp-content/uploads/2022/05/sauvignon_blanc_del_sur.jpg",
+        "images": [
+            "https://vinosargentinos.com/wp-content/uploads/2022/05/sauvignon_blanc_del_sur.jpg"
+        ]
+    },
+    {
+        "id": 11,
+        "title": "Alma Gemela Reserva",
+        "description": "Complejo y elegante, con notas de frutos rojos y especias, envejecido en barricas de roble francés",
+        "price": 35,
+        "discountPercentage": 10.2,
+        "rating": 4.6,
+        "stock": 160,
+        "brand": "Bodega Alma Gemela",
+        "category": "malbec",
+        "thumbnail": "https://vinosargentinos.com/wp-content/uploads/2022/10/alma_gemela_reserva_malbec.jpg",
+        "images": [
+            "https://vinosargentinos.com/wp-content/uploads/2022/10/alma_gemela_reserva_malbec.jpg"
+        ]
+    },
+    {
+        "id": 12,
+        "title": "Viñedos del Valle Gran Bonarda",
+        "description": "Potente y estructurado, con notas de frutos negros y vainilla, ideal para platos de caza y quesos fuertes",
+        "price": 28,
+        "discountPercentage": 8.5,
+        "rating": 4.3,
+        "stock": 175,
+        "brand": "Viñedos del Valle",
+        "category": "bonarda",
+        "thumbnail": "https://vinosargentinos.com/wp-content/uploads/2022/12/vinedos_del_valle_gran_bonarda.jpg",
+        "images": [
+            "https://vinosargentinos.com/wp-content/uploads/2022/12/vinedos_del_valle_gran_bonarda.jpg"
+        ]
+    },
+    {
+        "id": 13,
+        "title": "Luz de Luna Torrontés",
+        "description": "Aromático y fresco, con notas de flores blancas y frutas tropicales, perfecto para mariscos y ensaladas",
+        "price": 22,
+        "discountPercentage": 6.8,
+        "rating": 4.0,
+        "stock": 200,
+        "brand": "Bodegas Luna",
+        "category": "torrontes",
+        "thumbnail": "https://vinosargentinos.com/wp-content/uploads/2022/03/luz_de_luna_torrontes.jpg",
+        "images": [
+            "https://vinosargentinos.com/wp-content/uploads/2022/03/luz_de_luna_torrontes.jpg"
+        ]
+    },
+    {
+        "id": 14,
+        "title": "Piedra Negra Gran Cabernet Sauvignon",
+        "description": "Elegante y potente, con notas de frutos negros y tabaco, envejecido en barricas de roble americano",
+        "price": 40,
+        "discountPercentage": 15,
+        "rating": 4.8,
+        "stock": 140,
+        "brand": "Bodega Piedra Negra",
+        "category": "cabernetSauvignon",
+        "thumbnail": "https://vinosargentinos.com/wp-content/uploads/2022/05/piedra_negra_gran_cabernet_sauvignon.jpg",
+        "images": [
+            "https://vinosargentinos.com/wp-content/uploads/2022/05/piedra_negra_gran_cabernet_sauvignon.jpg"
+        ]
+    },
+    {
+        "id": 15,
+        "title": "Aurora Merlot Reserva",
+        "description": "Suave y sedoso, con aromas a frutos rojos y notas de chocolate, ideal para platos de carne de cerdo",
+        "price": 33,
+        "discountPercentage": 11.5,
+        "rating": 4.2,
+        "stock": 180,
+        "brand": "Bodega Aurora",
+        "category": "merlot",
+        "thumbnail": "https://vinosargentinos.com/wp-content/uploads/2022/08/aurora_merlot_reserva.jpg",
+        "images": [
+            "https://vinosargentinos.com/wp-content/uploads/2022/08/aurora_merlot_reserva.jpg"
+        ]
+    },
+    {
+        "id": 16,
+        "title": "Mystère Pinot Noir",
+        "description": "Fresco y delicado, con notas de frambuesa y vainilla, ideal para maridar con platos de aves y quesos suaves",
+        "price": 27,
+        "discountPercentage": 9.2,
+        "rating": 4.5,
+        "stock": 195,
+        "brand": "Bodegas Mystère",
+        "category": "pinotNoir",
+        "thumbnail": "https://vinosargentinos.com/wp-content/uploads/2022/09/mystere_pinot_noir.jpg",
+        "images": [
+            "https://vinosargentinos.com/wp-content/uploads/2022/09/mystere_pinot_noir.jpg"
+        ]
+    },
+    {
+        "id": 17,
+        "title": "Estrella del Sur Syrah",
+        "description": "Intenso y especiado, con notas de ciruela y cacao, envejecido en barricas de roble francés",
+        "price": 29,
+        "discountPercentage": 8.7,
+        "rating": 4.3,
+        "stock": 185,
+        "brand": "Bodegas del Sur",
+        "category": "syrah",
+        "thumbnail": "https://vinosargentinos.com/wp-content/uploads/2022/07/estrella_del_sur_syrah.jpg",
+        "images": [
+            "https://vinosargentinos.com/wp-content/uploads/2022/07/estrella_del_sur_syrah.jpg"
+        ]
+    },
+    {
+        "id": 18,
+        "title": "La Fortaleza Tannat",
+        "description": "Robusto y concentrado, con taninos firmes y notas a frutos del bosque maduros, perfecto para asados y guisos",
+        "price": 36,
+        "discountPercentage": 12.3,
+        "rating": 4.6,
+        "stock": 170,
+        "brand": "Bodegas La Fortaleza",
+        "category": "tannat",
+        "thumbnail": "https://vinosargentinos.com/wp-content/uploads/2022/11/la_fortaleza_tannat.jpg",
+        "images": [
+            "https://vinosargentinos.com/wp-content/uploads/2022/11/la_fortaleza_tannat.jpg"
+        ]
+    },
+    {
+        "id": 19,
+        "title": "Delicias del Valle Chardonnay",
+        "description": "Refrescante y afrutado, con notas cítricas y florales, perfecto para disfrutar en terrazas y reuniones informales",
+        "price": 23,
+        "discountPercentage": 7,
+        "rating": 4.1,
+        "stock": 200,
+        "brand": "Viñedos del Valle",
+        "category": "chardonnay",
+        "thumbnail": "https://vinosargentinos.com/wp-content/uploads/2022/04/delicias_del_valle_chardonnay.jpg",
+        "images": [
+            "https://vinosargentinos.com/wp-content/uploads/2022/04/delicias_del_valle_chardonnay.jpg"
+        ]
+    }
+]
