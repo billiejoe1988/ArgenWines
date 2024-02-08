@@ -7,9 +7,9 @@ import { fontCollection } from './Global/fonts';
 
 const App = () => {
   const [fontsLoaded] = useFonts(fontCollection)
-  const [categorySelected, setCategorySelected]= useState("")
+  const [categorySelected, setCategorySelected] = useState("")
 
-  if(!fontsLoaded) return null
+  if (!fontsLoaded) return null;
 
   const selectedCategoryState = (category) => {
     setCategorySelected(category)
@@ -17,14 +17,14 @@ const App = () => {
   
   return (
     <>
-      {categorySelected ? 
-              <ProductsByCategory categorySelected={categorySelected} />
-              :
-              <Home selectedCategoryState={selectedCategoryState}/>
-      }
+      {categorySelected !== "" ? (
+        <ProductsByCategory categorySelected={categorySelected} />
+      ) : (
+        <Home selectedCategoryState={selectedCategoryState}/>
+      )}
     </>
-  )
-}
+  );
+};
 
 export default App
 

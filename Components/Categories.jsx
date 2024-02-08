@@ -5,9 +5,8 @@ import ItemCategory from './ItemCategory'
 const Categories = ({ selectedCategoryState }) => {
   return (
       <FlatList
-        style={styles.container}
         data={categories}
-        keyExtractor={item => item}
+        keyExtractor={(item) => item}
         renderItem={({ item }) => (
           <ItemCategory item={item} selectedCategoryState={selectedCategoryState} />
         )} 
@@ -15,11 +14,11 @@ const Categories = ({ selectedCategoryState }) => {
   )
 }
 
-export default Categories
+export default Categories;
 
 const styles = StyleSheet.create({
   container: {
       flex: 1,
-      width: '100%',
+      width: "100%",
   }
 });

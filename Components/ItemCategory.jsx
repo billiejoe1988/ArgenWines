@@ -1,15 +1,13 @@
-import { Pressable, StyleSheet, Text, View } from 'react-native';
+import { Pressable, StyleSheet, Text, View, FlatList } from 'react-native';
 import colors from '../Global/colors';
 import ShadowBase from '../Wrapper/ShadowBase';
 import { fontCollection } from '../Global/fonts';
 
 const ItemCategory = ({ item, selectedCategoryState }) => {
   return (
-    <Pressable onPress={() => selectedCategoryState(item)}>
-      <ShadowBase>
-        <View style={styles.card}>
+    <Pressable onPress={()=>selectedCategoryState(item)}>
+      <ShadowBase style={styles.container}>
           <Text style={styles.text}>{item}</Text>
-        </View>
       </ShadowBase>
     </Pressable>
   );
@@ -20,9 +18,12 @@ export default ItemCategory;
 const styles = StyleSheet.create({
   card: {
     backgroundColor: colors.base,
-    borderRadius: 10,
-    padding: 20,
-    marginVertical: 10,
+    width:"80%",
+    marginHorizontal:"10%",
+    marginVertical:10,
+    padding:20,
+    alignItems:"center",
+    borderRadius:5
   },
   text: {
     fontSize: 16,
