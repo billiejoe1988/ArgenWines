@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react'
 import ProductByCategory from '../Components/ProductByCategory'
 import Search from '../Components/Search'
 
-const ProductsByCategory = ({categorySelected}) => {
+const ProductsByCategory = ({categorySelected, selectedProductId}) => {
 
   const [productsFiltered,setProductsFiltered] = useState([])
   const [keyword,setKeyword] = useState("")

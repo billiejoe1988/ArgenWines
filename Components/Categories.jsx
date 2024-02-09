@@ -14,11 +14,11 @@ const Categories = ({ selectedCategoryState }) => {
   )
 }
 
-export default Categories;
+export default Categories
 
 const styles = StyleSheet.create({
   container: {
       flex: 1,
-      width: "100%",
+      width: '100%',
   }
 });
