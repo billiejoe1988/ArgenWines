@@ -1,16 +1,12 @@
-import { StyleSheet, View } from 'react-native';
-import Header from '../Components/Header';
 import Categories from '../Components/Categories';
+import { View } from 'react-native';
 
-const Home = ({ selectedCategoryState }) => {
+const Home = ({ navigation }) => {
   return (
     <View>
-      <Header title="ArgenWines"/>
-      <Categories selectedCategoryState={selectedCategoryState}/>
+      <Categories navigation={navigation} />
     </View>
   );
 }
 
 export default Home;
-
-const styles = StyleSheet.create({});

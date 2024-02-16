@@ -4,18 +4,22 @@ import { Ionicons } from '@expo/vector-icons';
 import colors from '../Global/colors';
 import { fontCollection } from '../Global/fonts';
 
-const ProductByCategory = ({ item }) => {
+const ProductByCategory = ({ item, navigation }) => {
+  const handlePress = () => {
+    navigation.navigate("ProductDetail", { productId: item.id });
+  };
+
   return (
-    <View style={styles.container}>
+    <TouchableOpacity onPress={handlePress} style={styles.container}>
       <Image style={styles.img} source={{ uri: item.thumbnail }} resizeMode="cover" />
       <View style={styles.textContainer}>
         <Text style={styles.title}>{item.title}</Text>
         <Text style={styles.price}>$ {item.price}</Text>
       </View>
-      <TouchableOpacity style={styles.buyButton} onPress={() => console.log('Comprar')}>
+      <TouchableOpacity style={styles.buyButton} onPress={() => console.log('Buy')}>
         <Ionicons name="cart" size={24} color="white" />
       </TouchableOpacity>
-    </View>
+    </TouchableOpacity>
   );
 }
 
@@ -34,7 +38,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     borderRadius: 5,
     borderWidth: 1,
-    borderColor: 'gray',
+    borderColor: 'goldenrod',
   },
   textContainer: {
     flex: 1,
@@ -47,7 +51,7 @@ const styles = StyleSheet.create({
     color: 'white',
   },
   price: {
-    fontSize: 16,
+    fontSize: 20,
     color: '#000',
   },
   img: {

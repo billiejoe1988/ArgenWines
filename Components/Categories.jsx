@@ -1,24 +1,27 @@
-import { StyleSheet, Text, View, FlatList } from 'react-native'
-import categories from '../Data/categories.json' 
-import ItemCategory from './ItemCategory'
+import React from 'react';
+import { StyleSheet, Text, View, FlatList, useWindowDimensions } from 'react-native';
+import categories from '../Data/categories.json';
+import ItemCategory from './ItemCategory';
 
-const Categories = ({ selectedCategoryState }) => {
+const Categories = ({ navigation }) => {
+  const { width, height } = useWindowDimensions();
+
   return (
-      <FlatList
-        data={categories}
-        keyExtractor={(item) => item}
-        renderItem={({ item }) => (
-          <ItemCategory item={item} selectedCategoryState={selectedCategoryState} />
-        )} 
-      />
-  )
+    <FlatList
+      data={categories}
+      keyExtractor={(item, index) => index.toString()}
+      renderItem={({ item }) => <ItemCategory item={item} navigation={navigation} />}
+      horizontal={width > height} 
+      contentContainerStyle={styles.container}
+      showsHorizontalScrollIndicator={true} 
+    />
+  );
 }
 
-export default Categories
+export default Categories;
 
 const styles = StyleSheet.create({
   container: {
-      flex: 1,
-      width: '100%',
-  }
+    flexGrow: 1,
+  },
 });

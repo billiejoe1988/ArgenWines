@@ -10,7 +10,7 @@ const Search = ({ handlerKeyword }) => {
 
     const search = () => {
         const trimmedInput = input.trim();
-        const expression = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
+        const expression = /[!@#$%^&*()_+\=\[\]{};':"\\|,.<>\/?]/;
         if (expression.test(input)) {
             setError("Characters Error");
             return;
@@ -66,6 +66,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 10,
         paddingVertical: 5,
         borderRadius: 5,
+        borderColor: 'goldenrod',
         opacity: 0.7,
         backgroundColor: '#f8f8f89e',
         maxWidth: '80%',
