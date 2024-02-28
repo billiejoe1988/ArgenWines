@@ -1,0 +1,82 @@
+[
+    {
+        "total": 196,
+        "id":1,
+        "userId":2,
+        "createAt": 1679869276580,
+        "items":[
+            {
+                "id": 9,
+                "quantity":2,
+                "title": "Chardonnay Clásico",
+                "description": "Fresh and aromatic, with notes of apple and pineapple, ideal for accompanying poultry and fish dishes",
+                "price": 20,
+                "discountPercentage": 6.5,
+                "rating": 3.7,
+                "stock": 195,
+                "brand": "Viñedos del Este",
+                "category": "Chardonnay",
+                "thumbnail": "https://vinotecaligier.com/media/catalog/product/cache/73269a27812eefec516431430aa0b457/b/e/be75539_base.jpg",
+                "images": [
+                    "https://vinotecaligier.com/media/catalog/product/cache/73269a27812eefec516431430aa0b457/b/e/be75539_base.jpg"
+                ]
+            },
+            {
+                "id": 11,
+                "quantity":1,
+                "title": "Alma Gemela Reserva",
+                "description": "Complex and elegant, with notes of red fruits and spices, aged in French oak barrels",
+                "price": 35,
+                "discountPercentage": 10.2,
+                "rating": 4.6,
+                "stock": 160,
+                "brand": "Bodega Alma Gemela",
+                "category": "Malbec",
+                "thumbnail": "https://vinotecaligier.com/media/catalog/product/cache/73269a27812eefec516431430aa0b457/b/e/be02464_base_rwsioiyrpniqzsdc.jpg",
+                "images": [
+                    "https://vinotecaligier.com/media/catalog/product/cache/73269a27812eefec516431430aa0b457/b/e/be02464_base_rwsioiyrpniqzsdc.jpg"
+                ]
+            }
+        ]
+    },
+    {
+        "total": 99,
+        "id":2,
+        "userId":2,
+        "createdAt": 1679869276580,
+        "items":[
+            {
+                "id": 17,
+                "quantity":1,
+                "title": "Estrella del Sur Syrah",
+                "description": "Intense and spicy, with notes of plum and cocoa, aged in French oak barrels",
+                "price": 29,
+                "discountPercentage": 8.7,
+                "rating": 4.3,
+                "stock": 185,
+                "brand": "Bodegas del Sur",
+                "category": "Syrah",
+                "thumbnail": "https://vinotecaligier.com/media/catalog/product/cache/73269a27812eefec516431430aa0b457/b/e/be01122_1_3cscoqgjnaasv7cc.jpg",
+                "images": [
+                    "https://vinotecaligier.com/media/catalog/product/cache/73269a27812eefec516431430aa0b457/b/e/be01122_1_3cscoqgjnaasv7cc.jpg"
+                ]
+            },
+            {
+                "id": 14,
+                "quantity":1,
+                "title": "Piedra Negra Gran Cabernet Sauvignon",
+                "description": "Elegant and powerful, with notes of black fruits and tobacco, aged in American oak barrels",
+                "price": 40,
+                "discountPercentage": 15,
+                "rating": 4.8,
+                "stock": 140,
+                "brand": "Bodega Piedra Negra",
+                "category": "Cabernet Sauvignon",
+                "thumbnail": "https://vinotecaligier.com/media/catalog/product/cache/73269a27812eefec516431430aa0b457/b/e/be75685_base_22y5glm1gflcydgi.jpg",
+                "images": [
+                    "https://vinotecaligier.com/media/catalog/product/cache/73269a27812eefec516431430aa0b457/b/e/be75685_base_22y5glm1gflcydgi.jpg"
+                ]
+            }
+        ]
+    }
+]

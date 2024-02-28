@@ -1,8 +1,8 @@
-import { StyleSheet, Text, View, Image, TouchableOpacity, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity, ScrollView, Pressable } from 'react-native';
 import products from '../Data/products.json';
 import { useEffect, useState } from 'react';
 import colors from '../Global/colors';
-import Header from '../Components/Header';
+import Counter from '../Components/Counter'
 
 const ProductDetail = ({ route }) => {
   const { productId } = route.params;
@@ -28,9 +28,10 @@ const ProductDetail = ({ route }) => {
           </View>
           <View style={styles.containerPrice}>
             <Text style={styles.price}>$ {product.price}</Text>
-            <TouchableOpacity onPress={() => console.log('Buy')} style={styles.buyNow}>
-              <Text style={styles.buyNowText}>Buy Now</Text>
-            </TouchableOpacity>
+            <Counter 
+            initialValue={1}
+            product={product} 
+            textButton="Cart" />
           </View>
         </View>
       </View>

@@ -16,9 +16,6 @@ const ProductByCategory = ({ item, navigation }) => {
         <Text style={styles.title}>{item.title}</Text>
         <Text style={styles.price}>$ {item.price}</Text>
       </View>
-      <TouchableOpacity style={styles.buyButton} onPress={() => console.log('Buy')}>
-        <Ionicons name="cart" size={24} color="white" />
-      </TouchableOpacity>
     </TouchableOpacity>
   );
 }
