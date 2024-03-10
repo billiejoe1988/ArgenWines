@@ -3,6 +3,8 @@
 
 Indulge in the rich and flavorful world of Argentine wines with **ArgenWine** – your premier destination for experiencing the finest Argentine vintages, meticulously curated for global enthusiasts and connoisseurs.
 
+# React Native # Redux RKT Query # FireBase # SQLite # React Navigator # Redux Store
+
 ## 🍇 Discover Distinctive Flavors
 Explore a diverse selection of premium Argentine wines, each bottle telling a unique story of the country's rich viticultural heritage. From the iconic Malbecs to the elegant Torrontés, **ArgenWine** brings you a curated collection that captures the essence of Argentina's renowned wine regions.
 

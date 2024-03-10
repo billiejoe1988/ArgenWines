@@ -1,9 +1,10 @@
 import React from 'react';
 import { StyleSheet, Text, View, FlatList, useWindowDimensions } from 'react-native';
-import categories from '../Data/categories.json';
+import { useGetCategoriesQuery } from '../app/services/shop';
 import ItemCategory from './ItemCategory';
 
 const Categories = ({ navigation }) => {
+  const {data:categories} = useGetCategoriesQuery()
   const { width, height } = useWindowDimensions();
 
   return (

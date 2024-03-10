@@ -1,17 +1,14 @@
 import { StyleSheet, Text, View, Image, TouchableOpacity, ScrollView, Pressable } from 'react-native';
-import products from '../Data/products.json';
+import { useGetProductQuery } from '../app/services/shop';
 import { useEffect, useState } from 'react';
 import colors from '../Global/colors';
 import Counter from '../Components/Counter'
 
 const ProductDetail = ({ route }) => {
   const { productId } = route.params;
-  const [product, setProduct] = useState({});
-
-  useEffect(() => {
-    const productFound = products.find(product => product.id === productId);
-    setProduct(productFound);
-  }, [productId]);
+  const {data:product, isLoading} = useGetProductQuery(productId)
+  
+  if(isLoading) return <View><Text>loading...</Text></View>
 
   return (
     <ScrollView contentContainerStyle={styles.scrollViewContent} horizontal={false}>
