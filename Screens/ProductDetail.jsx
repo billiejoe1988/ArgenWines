@@ -21,10 +21,10 @@ const ProductDetail = ({ route }) => {
           />
           <View style={styles.containerText}>
             <Text style={styles.title}>{product.title}</Text>
-            <Text>{product.description}</Text>
+            <Text>{product?.description}</Text>
           </View>
           <View style={styles.containerPrice}>
-            <Text style={styles.price}>$ {product.price}</Text>
+            <Text style={styles.price}>$ {product?.price}</Text>
             <Counter 
             initialValue={1}
             product={product} 
