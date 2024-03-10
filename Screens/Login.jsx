@@ -19,13 +19,10 @@ const Login = ({navigation}) => {
 
     const onSubmit = async () => {
       try {
-
         loginSchema.validateSync({email,password})
         const {data} = await  triggerLogin({email,password})
         dispatch(setUser({email:data.email,idToken:data.idToken,localId:data.localId}))
-
       } catch (error) {
-
         setErrorEmail("")
         setErrorPassword("")
 

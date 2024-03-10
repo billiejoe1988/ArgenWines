@@ -1,16 +1,27 @@
 import { StyleSheet, Text, View, FlatList, Pressable, Modal, Button } from 'react-native'
 import CartItem from '../Components/CartItem'
-import cart from '../Data/cart.json'
 import colors from '../Global/colors'
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { deleteCart } from '../features/cart/cartSlice';
+import { usePostOrderMutation } from '../app/services/orders';
 
-const Cart = () => {
-    const cart = useSelector((state) => state.cart);
-    let modalVisible = false;
+const Cart = ({navigation}) => {
 
-    const handleConfirm = () => {
-        modalVisible = true;
-    };
+    const dispatch = useDispatch()
+    const cart = useSelector((state)=> state.cart)
+    const localId = useSelector((state)=> state.auth.localId)
+    const [triggerAddOrder] = usePostOrderMutation()
+
+    const handlerAddOrder = async () => {
+        const createdAt = new Date().toLocaleString()
+        const order = {
+            createdAt,
+            ...cart
+        }
+         await triggerAddOrder({localId,order})
+         dispatch(deleteCart())
+         navigation.navigate("OrdersStack")
+    }
     
   return (
     <View style={styles.container}>
@@ -20,26 +31,11 @@ const Cart = () => {
         renderItem={({item})=> <CartItem item={item}/>}
         />
         <View style={styles.confirmContainer}>
-                <Pressable style={styles.confirmButton} onPress={handleConfirm}>
+                <Pressable style={styles.confirmButton} onPress={handlerAddOrder}>
                     <Text style={styles.confirmText}>Confirm</Text>
                 </Pressable>
                 <Text style={styles.confirmText2}>Total: $ {cart.total}</Text>
         </View>
-        <Modal
-                animationType="slide"
-                transparent={true}
-                visible={modalVisible}
-                onRequestClose={() => {
-                    setModalVisible(!modalVisible);
-                }}
-            >
-                <View style={styles.centeredView}>
-                    <View style={styles.modalView}>
-                        <Text style={styles.modalText}>Purchase Confirmed!</Text>
-                        <Button title="Close" onPress={() => setModalVisible(!modalVisible)} />
-                    </View>
-                </View>
-            </Modal>
     </View>
   )
 }
