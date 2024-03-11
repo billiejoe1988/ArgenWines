@@ -16,10 +16,10 @@ const Counter = ({initialValue,textButton,product}) => {
 
   return (
     <View style={styles.counterContainer}>
-        <Button color={colors.base} title='+' onPress={()=> setCount(count + 1) }/>
+        <Button color={colors.base} title='  +  ' onPress={()=> setCount(count + 1) }/>
         <Text style={styles.text}>{count}</Text>
-        <Button color={colors.base} title='-'  onPress={ ()=> setCount(count - 1) }/>   
-        <Button color={colors.base} title={textButton} onPress={()=>handlerAddCartItem(count)} />
+        <Button color={colors.base} title='  -  '  onPress={ ()=> setCount(count - 1) }/>   
+        <Button color={colors.base} title={ textButton } onPress={()=>handlerAddCartItem(count)} />
     </View>
   )
 }
@@ -36,6 +36,7 @@ const styles = StyleSheet.create({
       },
       text:{
         width:50,
-        textAlign:"center"
+        textAlign:"center",
+        fontWeight:'bold'
       }
 })

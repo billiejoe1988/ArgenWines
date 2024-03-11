@@ -32,10 +32,13 @@ const styles = StyleSheet.create({
     },
     image: {
         width: 200,
-        height: 200
+        height: 200,
+        borderRadius:20,
     },
     text: {
         fontSize: 16,
+        marginLeft:30,
+        marginRight:30,
         marginVertical: 10
     }
 })

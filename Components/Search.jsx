@@ -70,6 +70,7 @@ const styles = StyleSheet.create({
         opacity: 0.7,
         backgroundColor: '#f8f8f89e',
         maxWidth: '80%',
+        fontSize: 18,
     },
     icon: {
         marginLeft: 10,

@@ -18,11 +18,12 @@ const styles = StyleSheet.create({
         backgroundColor:colors.gold,
         padding:10,
         alignItems:"center",
-        borderRadius:10
+        borderRadius:10,
+        borderColor:'gray'
     },
     text:{
         textAlign:"center",
-        color:"white",
+        color: 'black' ,
         fontSize:18
     }
 })

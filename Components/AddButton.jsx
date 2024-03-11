@@ -14,13 +14,14 @@ export default AddButton
 
 const styles = StyleSheet.create({
     container:{
-        backgroundColor:colors.base,
+        backgroundColor:colors.gold,
         width:"70%",
         paddingVertical:8,
-        margin:10
+        margin:10,
+        borderRadius:20,
     },
     text:{
-        color:"white",
+        color:colors.base,
         textAlign:"center",
         fontSize:18
     }

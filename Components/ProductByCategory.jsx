@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
   },
   price: {
     fontSize: 20,
-    color: '#000',
+    color: 'gold'
   },
   img: {
     borderRadius: 5,

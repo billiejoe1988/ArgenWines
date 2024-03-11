@@ -27,15 +27,17 @@ const styles = StyleSheet.create({
         borderWidth:0,
         borderBottomWidth:3,
         borderBottomColor:"white",
+        color:'gold',
         padding:2,
-        fontSize:14,
+        fontSize:17,
         marginHorizontal:"5%",
         marginVertical:10
       },
       titleInput:{
         width:"90%",
         marginHorizontal:"5%",
-        fontSize:16,
+        fontSize:18,
+        color:'white'
       },
       error:{
         fontSize:16,

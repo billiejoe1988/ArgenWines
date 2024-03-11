@@ -59,7 +59,7 @@ const Login = ({navigation}) => {
                 <SubmitButton onPress={onSubmit} title="Log In"/>
                 <Text style={styles.sub}>Already have an account?</Text>
                 <Pressable onPress={()=> navigation.navigate("Register")} >
-                    <Text style={styles.subLink}>Sign In</Text>
+                    <Text style={styles.subLink}>Sign up</Text>
                 </Pressable>
             </View>
         </View>
@@ -81,16 +81,21 @@ const styles = StyleSheet.create({
       borderRadius:10,
       justifyContent:"center",
       alignItems:"center",
-      paddingVertical:20
+      paddingVertical:20,
+      opacity: 0.9,
+      borderColor: colors.gold
     },
     title:{
       fontSize:22,
+      color: 'white'
     },
     sub:{
-      fontSize:14,
+      fontSize:18,
+      color: 'white'
     },
     subLink:{
-      fontSize:14,
-      color:"gray"
+      fontSize:18,
+      color:"gold",
+      fontWeight: 'bold'
     }
 })

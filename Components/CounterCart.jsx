@@ -1,7 +1,6 @@
 import { StyleSheet, View, Button,Text } from 'react-native'
 import { useDispatch } from 'react-redux'
 import { addCartItem } from '../features/cart/cartSlice'
-import { Colors } from 'react-native/Libraries/NewAppScreen'
 
 const CounterCart = ({item}) => {
 
@@ -9,9 +8,9 @@ const CounterCart = ({item}) => {
 
   return (
     <View style={styles.counterContainer}>
-        <Button color='#4b4b4b' title='+' onPress={()=> dispatch(addCartItem({...item,quantity:1})) }/>
+        <Button color='#504249cd' title='  +  ' onPress={()=> dispatch(addCartItem({...item,quantity:1})) }/>
         <Text style={styles.text}>{item.quantity}</Text>
-        <Button  color='#4b4b4b' title='-'  onPress={ ()=> dispatch(addCartItem({...item,quantity:-1})) }/>   
+        <Button  color='#504249cd' title='  -  '  onPress={ ()=> dispatch(addCartItem({...item,quantity:-1})) }/>   
     </View>
   )
 }

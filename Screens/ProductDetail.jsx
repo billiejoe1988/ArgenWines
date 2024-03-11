@@ -72,7 +72,8 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(0,0,0,0.5)',
     padding: 5,
     borderRadius: 20,
-    color: 'goldenrod'
+    color: 'goldenrod',
+    fontWeight: 'bold',
   },
   price: {
     fontSize: 30

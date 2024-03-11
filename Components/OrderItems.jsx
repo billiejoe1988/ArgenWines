@@ -12,27 +12,34 @@ const OrderItem = ({order}) => {
             </Text>
             <Text style={styles.text2}>$ {order.total}</Text>
         </View>
-        <Feather name="search" size={30} color="black"/>
+        <Feather name="search" size={30} color="gold"/>
     </View>
   )
 }
 
 export default OrderItem
-
 const styles = StyleSheet.create({
     card:{
-        backgroundColor:colors.primary,
-        borderWidth:2,
-        margin:10,
-        padding:10,
-        borderRadius:10,
-        flexDirection:"row",
-        justifyContent:"space-between",
-        height:100,
-        alignItems:"center"
-        
+        backgroundColor: colors.lightGray,
+        borderWidth: 2,
+        margin: 10,
+        padding: 10,
+        borderRadius: 10,
+        flexDirection: "row",
+        justifyContent: "space-between",
+        height: 100,
+        alignItems: "center",
+        color: 'white',
+        borderColor: colors.base,
     },
     textContainer:{
-        width:"70%"
+        width: "70%",
+        color: 'white'
     },
+    text: {
+        color: 'white',
+    },
+    text2: {
+        color: 'white',
+    }
 })
