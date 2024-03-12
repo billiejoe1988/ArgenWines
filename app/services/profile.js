@@ -1,33 +1,35 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
 export const profileApi = createApi({
-    reducerPath:"profileApi",
-    baseQuery:fetchBaseQuery({baseUrl:"https://argenwines-a6d4c-default-rtdb.firebaseio.com/"}),
-    endpoints:(builder)=>({
+    reducerPath: "profileApi",
+    baseQuery: fetchBaseQuery({ baseUrl: "https://argenwines-a6d4c-default-rtdb.firebaseio.com/" }),
+    tagTypes: ["userImage"],
+    endpoints: (builder) => ({
         putImage: builder.mutation({
-            query:({image,localId})=>({
-                url:`/profile/${localId}.json`,
-                method:"PUT",
-                body:{image}
-            })
+            query: ({ image, localId }) => ({
+                url: `/profile/${localId}.json`,
+                method: "PUT",
+                body: { image }
+            }),
+            invalidatesTags: ["userImage"]
         }),
         getImage: builder.query({
-            query:(localId) => `/profile/${localId}.json`
+            query: (localId) => `/profile/${localId}.json`,
+            providesTags: ["userImage"]
         }),
-        putUserLocation:builder.mutation({
-            query:({localId,locationFormatted})=> ({
-                url:`/userLocation/${localId}.json`,
-                method:"PUT",
-                body:locationFormatted
-
+        putUserLocation: builder.mutation({
+            query: ({ localId, locationFormatted }) => ({
+                url: `/userLocation/${localId}.json`,
+                method: "PUT",
+                body: locationFormatted
             })
         }),
-        getUserLocation:builder.query({
-            query:(localId) => `/userLocation/${localId}.json`
+        getUserLocation: builder.query({
+            query: (localId) => `/userLocation/${localId}.json`
         })
-
     })
-})
+});
+
 
 export const {  usePutImageMutation,
                 useGetImageQuery,
