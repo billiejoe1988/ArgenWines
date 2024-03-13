@@ -3,6 +3,7 @@ import { useGetProductQuery } from '../app/services/shop';
 import { useEffect, useState } from 'react';
 import colors from '../Global/colors';
 import Counter from '../Components/Counter'
+import { useDispatch } from 'react-redux'
 
 const ProductDetail = ({ route }) => {
   const dispatch = useDispatch()

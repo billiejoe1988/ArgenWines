@@ -7,7 +7,7 @@ import { useGetProductsByCategoryQuery } from '../app/services/shop'
 const ProductsByCategory = ({navigation,route}) => {
 
   const {categorySelected} = route.params
-  const {data:products} = useGetProductsByCategoryQuery(categorySelected)
+  const {data:products,isError,isLoading,isSuccess,error} = useGetProductsByCategoryQuery(categorySelected)
   const [productsFiltered,setProductsFiltered] = useState([])
   const [keyword,setKeyword] = useState("")
 

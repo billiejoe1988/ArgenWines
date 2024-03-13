@@ -1,7 +1,10 @@
 import { NavigationContainer } from '@react-navigation/native'
 import TabNavigator from './TabNavigator'
 import AuthStack from './AuthStack'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { fetchSession } from '../Data/db';
+import { setUser } from '../features/auth/authSlice';
 
 const MainNavigator = () => {
     

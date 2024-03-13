@@ -2,7 +2,6 @@ import { StyleSheet, Text, View, Pressable, Image  } from 'react-native'
 import {Entypo} from '@expo/vector-icons'
 import { useDispatch } from 'react-redux'
 import { deleteCartItem ,addCartItem } from '../features/cart/cartSlice'
-import Counter from './Counter'
 import CounterCart from './CounterCart'
 import colors from '../Global/colors'
 

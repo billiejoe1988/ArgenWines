@@ -6,7 +6,7 @@ import { fontCollection } from './Global/fonts';
 import MainNavigator from './Navigation/MainNav';
 import { Provider } from 'react-redux';
 import { store } from './app/store/store';
-import { init } from './Data/db'
+import { init } from './Data/db/index'
 
 init()
 
@@ -16,10 +16,12 @@ const App = () => {
   if (!fontsLoaded) return null;
   
   return (
-    <Provider store={store}> 
+    <>
       <StatusBar style={styles.status} />
-      <MainNavigator />
-    </Provider>
+      <Provider store={store}> 
+        <MainNavigator />
+      </Provider>
+    </>
   );
 };
 
