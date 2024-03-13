@@ -5,8 +5,9 @@ import colors from '../Global/colors';
 import Counter from '../Components/Counter'
 
 const ProductDetail = ({ route }) => {
-  const { productId } = route.params;
-  const {data:product, isLoading} = useGetProductQuery(productId)
+  const dispatch = useDispatch()
+  const {productId} = route.params
+  const {data:product,isLoading} = useGetProductQuery(productId)
   
   if(isLoading) return <View><Text>loading...</Text></View>
 

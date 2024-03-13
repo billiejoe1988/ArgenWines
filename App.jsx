@@ -6,6 +6,9 @@ import { fontCollection } from './Global/fonts';
 import MainNavigator from './Navigation/MainNav';
 import { Provider } from 'react-redux';
 import { store } from './app/store/store';
+import { init } from './Data/db'
+
+init()
 
 const App = () => {
   const [fontsLoaded] = useFonts(fontCollection);
