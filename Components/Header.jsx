@@ -2,9 +2,17 @@ import React from 'react';
 import { View, Text, StyleSheet, Platform, StatusBar, Pressable } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 import colors from '../Global/colors';
+import clearUser from '../features/auth/authSlice'
 
 const Header = ({ title = "ArgenWines", navigation }) => {
+  const onLogout = () => {
+  const idToken = useSelector((state) => state.auth.idToken)
   const showBackButton = navigation && navigation.canGoBack();
+
+  const onLogout = () => {
+    dispatch(clearUser())
+    deleteSession()
+}
 
   return (
     <View style={styles.container}>
@@ -13,7 +21,11 @@ const Header = ({ title = "ArgenWines", navigation }) => {
           <AntDesign name="arrowleft" size={24} color="goldenrod" />
         </Pressable>
       )}
-      <Text style={styles.text}>{title}</Text>
+      <Text style={styles.text}>{title}</Text>                
+      {idToken && (
+                    <Pressable style={styles.logoutIcon} onPress={onLogout}>
+                     <AntDesign name="logout" size={30} color="black"/>
+                    </Pressable>)}
     </View>
   );
 };
