@@ -1,11 +1,13 @@
 import React from 'react';
 import { View, Text, StyleSheet, Platform, StatusBar, Pressable } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
+import { useDispatch, useSelector } from "react-redux"
 import colors from '../Global/colors';
 import clearUser from '../features/auth/authSlice'
+import { deleteSession } from '../Data/db'
 
 const Header = ({ title = "ArgenWines", navigation }) => {
-  const onLogout = () => {
+
   const idToken = useSelector((state) => state.auth.idToken)
   const showBackButton = navigation && navigation.canGoBack();
 
