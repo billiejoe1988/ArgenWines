@@ -22,8 +22,8 @@ const Login = ({navigation}) => {
       try {
         loginSchema.validateSync({email,password})
         const {data} = await  triggerLogin({email,password})
-        deleteSession()
-        insertSession(data)
+        await deleteSession()
+        await insertSession(data)
         dispatch(setUser({email:data.email,idToken:data.idToken,localId:data.localId}))
         
       } catch (error) {
@@ -38,7 +38,7 @@ const Login = ({navigation}) => {
             setErrorPassword(error.message)
             break
           default:
-            console.log('error')
+            console.log('Login Error', error)
             break
         }
       }
