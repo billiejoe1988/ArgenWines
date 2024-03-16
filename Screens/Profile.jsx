@@ -5,8 +5,8 @@ import { useGetImageQuery, useGetUserLocationQuery } from '../app/services/profi
 
 const Profile = ({ navigation }) => {
     const localId = useSelector((state) => state.auth.localId)
-    const { data: locationFormatted } = useGetUserLocationQuery(localId)
-    const { data } = useGetImageQuery(localId)
+    const {data:locationFormatted } = useGetUserLocationQuery(localId)
+    const {data} = useGetImageQuery(localId)
 
     return (
         <View style={styles.container}>
@@ -15,7 +15,7 @@ const Profile = ({ navigation }) => {
                 style={styles.image}
                 resizeMode='cover'
             />
-            <Text style={styles.text}>{locationFormatted && locationFormatted.address}</Text>
+            <Text style={styles.text}>{locationFormatted?.address}</Text>
             <AddButton title={"Add Perfil Image"} onPress={() => navigation.navigate("ImageSelector")} />
             <AddButton title={"Add Address"} onPress={() => navigation.navigate("LocationSelector")} />
         </View>

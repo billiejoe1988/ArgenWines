@@ -5,7 +5,7 @@ const db = SQLite.openDatabase('sessions.db')
 export const init = () => {
    const promise = new Promise ((resolve, reject) => {
      db.transaction(tx => {
-        tx.executeSql('CREATE TABLE IF NOT EXISTS sessionUser (localId TEXT NOT NULL,email TEXT NOT NULL,idToken TEXT NOT NULL)',[],(_, result)=> resolve(result), (_, result) => reject(result))
+      tx.executeSql('CREATE TABLE IF NOT EXISTS sessionUser (localId TEXT NOT NULL,email TEXT NOT NULL,idToken TEXT NOT NULL)',[],(_, result)=> resolve(result), (_, result) => reject(result))
      })
    })
    return promise
@@ -17,7 +17,7 @@ export const insertSession = ({localId, email, idToken}) => {
           tx.executeSql('INSERT INTO sessionUser (localId, email, idToken) VALUES (?, ?, ?)', [localId, email, idToken], (_, result) => resolve(result), (_, result) => reject(result));
        });
      });
-     return promise;
+     return promise
 }
 
 export const fetchSession = () => {

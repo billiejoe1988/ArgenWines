@@ -24,8 +24,8 @@ const Register = ({navigation}) => {
       try {
         registerSchema.validateSync({email,password,confirmPassword})
         const {data} = await  triggerRegister({email,password})
-        await deleteSession()
-        await insertSession(data)
+        deleteSession()
+        insertSession(data)
         dispatch(setUser({email:data.email,idToken:data.idToken,localId:data.localId}))
       } 
         catch (error) {

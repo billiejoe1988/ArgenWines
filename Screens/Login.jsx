@@ -22,8 +22,8 @@ const Login = ({navigation}) => {
       try {
         loginSchema.validateSync({email,password})
         const {data} = await  triggerLogin({email,password})
-        await deleteSession()
-        await insertSession(data)
+        deleteSession()
+        insertSession(data)
         dispatch(setUser({email:data.email,idToken:data.idToken,localId:data.localId}))
         
       } catch (error) {
