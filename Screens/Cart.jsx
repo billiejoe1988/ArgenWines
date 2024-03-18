@@ -45,6 +45,19 @@ const Cart = ({ navigation }) => {
             <Modal
                 animationType="slide"
                 transparent={true}
+                visible={cart.showDeleteModal}
+                onRequestClose={() => dispatch(hideDeleteModal())}>
+                <View style={styles.centeredView}>
+                    <View style={styles.modalView}>
+                        <Text style={styles.modalText}>Item deleted from cart</Text>
+                        <Button style={[styles.modalButton, styles.closeButton]} title="Close" onPress={() => dispatch(hideDeleteModal())} />
+                    </View>
+                </View>
+            </Modal>
+
+            <Modal
+                animationType="slide"
+                transparent={true}
                 visible={confirmModalVisible}
                 onRequestClose={() => setConfirmModalVisible(false)}>
                 <View style={styles.centeredView}>
