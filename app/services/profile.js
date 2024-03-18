@@ -1,9 +1,9 @@
-import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 export const profileApi = createApi({
     reducerPath: "profileApi",
     baseQuery: fetchBaseQuery({ baseUrl: "https://argenwines-a6d4c-default-rtdb.firebaseio.com/" }),
-    tagTypes: ["userImage"],
+    tagTypes: ["userImage", "userLocation"], 
     endpoints: (builder) => ({
         putImage: builder.mutation({
             query: ({ image, localId }) => ({
@@ -22,14 +22,15 @@ export const profileApi = createApi({
                 url: `/userLocation/${localId}.json`,
                 method: "PUT",
                 body: locationFormatted
-            })
+            }),
+            invalidatesTags: ["userLocation"] 
         }),
         getUserLocation: builder.query({
-            query: (localId) => `/userLocation/${localId}.json`
+            query: (localId) => `/userLocation/${localId}.json`,
+            providesTags: ["userLocation"] 
         })
     })
 });
-
 
 export const {  usePutImageMutation,
                 useGetImageQuery,
