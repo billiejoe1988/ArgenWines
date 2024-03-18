@@ -25,7 +25,7 @@ const Login = ({ navigation }) => {
       loginSchema.validateSync({ email, password });
       const { data } = await triggerLogin({ email, password });
       if (data) {
-        setModalMessage(`Welcome, ${data.email}!`);
+        setModalMessage(`Welcome, ${data.email} !`);
         setModalVisible(true);
         setTimeout(() => {
           deleteSession();
@@ -145,7 +145,7 @@ const styles = StyleSheet.create({
   },
   modalButtonText: {
     fontSize: 18, 
-    color:'black'
+    color:'gold'
   },
   modalText: {
     fontSize: 23,

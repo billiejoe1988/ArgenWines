@@ -161,6 +161,6 @@ const styles = StyleSheet.create({
     },
     modalButtonText: {
         fontSize: 18, 
-        color:'black'
+        color:'gold'
       },
 });
