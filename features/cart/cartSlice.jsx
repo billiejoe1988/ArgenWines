@@ -2,7 +2,8 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
     items:[],
-    total:0
+    total:0,
+    showDeleteModal: false,
 }
 
 export const cartSlice = createSlice({
@@ -28,14 +29,18 @@ export const cartSlice = createSlice({
         deleteCartItem:(state,actions) =>{
             state.items = state.items.filter((item)=> item.id !== actions.payload)
             state.total = state.items.reduce((acc,item)=> acc = acc + item.price,0)
+            state.showDeleteModal = true;
         },
         deleteCart:(state) => {
             state.total = 0
             state.items = []
+        },
+        hideDeleteModal: (state) => {
+            state.showDeleteModal = false;
         }
     }
 })
 
-export const  {addCartItem,deleteCartItem,deleteCart} = cartSlice.actions
+export const  { addCartItem, deleteCartItem, deleteCart, hideDeleteModal } = cartSlice.actions
 
 export default cartSlice.reducer

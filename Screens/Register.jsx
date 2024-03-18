@@ -157,8 +157,10 @@ const styles = StyleSheet.create({
     modalText: {
         fontSize: 23,
         textAlign: 'center',
+        color:'black'
     },
     modalButtonText: {
         fontSize: 18, 
+        color:'black'
       },
 });
