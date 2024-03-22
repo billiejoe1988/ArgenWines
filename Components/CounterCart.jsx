@@ -14,9 +14,9 @@ const CounterCart = ({ item }) => {
 
     return (
         <View style={styles.counterContainer}>
-            <Button color='#504249cd' title='  +  ' onPress={() => handlerAddCartItem(1)} />
+            <Button color='#6e032e' title='  +  ' onPress={() => handlerAddCartItem(1)} />
             <Text style={styles.text}>{item.quantity}</Text>
-            <Button color='#504249cd' title='  -  ' onPress={() => handlerAddCartItem(-1)} />
+            <Button color='#6e032e' title='  -  ' onPress={() => handlerAddCartItem(-1)} />
             
             <Modal
                 animationType="slide"

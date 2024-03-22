@@ -76,6 +76,7 @@ export default ImageSelector;
 
 const styles = StyleSheet.create({
     container: {
+        paddingVertical: 20,
         flex: 1,
         alignItems: "center",
         marginTop: 20

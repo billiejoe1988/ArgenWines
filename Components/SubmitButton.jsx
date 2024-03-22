@@ -1,29 +1,39 @@
-import { StyleSheet, Text,Pressable } from 'react-native'
-import colors from './../Global/colors'
+import React from 'react';
+import { StyleSheet, Text, Pressable } from 'react-native';
+import colors from './../Global/colors';
+import { LinearGradient } from 'expo-linear-gradient';
 
-const SubmitButton = ({title,onPress}) => {
-   
+const SubmitButton = ({ title, onPress }) => {
   return (
-        <Pressable style={styles.button} onPress={onPress}>
-                <Text style={styles.text}>{title}</Text>
-        </Pressable>
-  )
-}
-
-export default SubmitButton
+    <Pressable style={styles.pressable} onPress={onPress}>
+      <LinearGradient
+        colors={[colors.gold, colors.base]}
+        style={styles.gradient}
+        start={{ x: 0, y: 0 }}
+        end={{ x: 1, y: 0 }}
+      >
+        <Text style={styles.text}>{title}</Text>
+      </LinearGradient>
+    </Pressable>
+  );
+};
 
 const styles = StyleSheet.create({
-    button:{
-        width:"60%",
-        backgroundColor:colors.gold,
-        padding:10,
-        alignItems:"center",
-        borderRadius:10,
-        borderColor:'gray'
-    },
-    text:{
-        textAlign:"center",
-        color: 'black' ,
-        fontSize:18
-    }
-})
+  pressable: {
+    width: '60%',
+    borderRadius: 10,
+    overflow: 'hidden', 
+    marginTop: 20,
+  },
+  gradient: {
+    padding: 12,
+    alignItems: 'center',
+  },
+  text: {
+    textAlign: 'center',
+    color: 'black',
+    fontSize: 18,
+  },
+});
+
+export default SubmitButton;

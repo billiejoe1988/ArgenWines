@@ -47,11 +47,9 @@ const Cart = ({ navigation }) => {
                 transparent={true}
                 visible={cart.showDeleteModal}
                 onRequestClose={() => dispatch(hideDeleteModal())}>
-                <View style={styles.centeredView}>
-                    <View style={styles.modalView}>
-                        <Text style={styles.modalText}>Item deleted from cart</Text>
-                        <Button style={[styles.modalButton, styles.closeButton]} title="Close" onPress={() => dispatch(hideDeleteModal())} />
-                    </View>
+                <View style={styles.modalView}>
+                    <Text style={styles.modalText}>Item deleted from cart</Text>
+                    <Button title="Close" onPress={() => dispatch(hideDeleteModal())} />
                 </View>
             </Modal>
 
@@ -60,11 +58,9 @@ const Cart = ({ navigation }) => {
                 transparent={true}
                 visible={confirmModalVisible}
                 onRequestClose={() => setConfirmModalVisible(false)}>
-                <View style={styles.centeredView}>
-                    <View style={styles.modalView}>
-                        <Text style={styles.modalText}>Order confirmed!</Text>
-                        <Button style={[styles.modalButton, styles.closeButton]} title="Close" onPress={() => setConfirmModalVisible(false)} />
-                    </View>
+                <View style={styles.modalView}>
+                    <Text style={styles.modalText}>Order confirmed!</Text>
+                    <Button title="Close" onPress={() => setConfirmModalVisible(false)} />
                 </View>
             </Modal>
         </View>
@@ -76,7 +72,6 @@ export default Cart;
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'space-between',
         marginBottom: 60,
     },
     confirmContainer: {
@@ -97,43 +92,18 @@ const styles = StyleSheet.create({
         backgroundColor: 'gold',
         paddingVertical: 10,
         paddingHorizontal: 20,
-        borderColor: 'gray',
         borderRadius: 5,
     },
-    centeredView: {
+    modalView: {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        marginTop: 22,
-    },
-    modalView: {
-        margin: 20,
-        backgroundColor: 'white',
-        borderRadius: 20,
-        padding: 35,
-        alignItems: 'center',
-        shadowColor: '#000',
-        shadowOffset: {
-            width: 0,
-            height: 2,
-        },
-        shadowOpacity: 0.25,
-        shadowRadius: 4,
-        elevation: 5,
+        backgroundColor: 'rgba(0, 0, 0, 0.5)',
+        paddingHorizontal: 20,
     },
     modalText: {
         marginBottom: 15,
         textAlign: 'center',
         fontSize: 20,
-    },
-    modalButtonText: {
-        color: 'black',
-        fontWeight: 'bold',
-        textAlign: 'center',
-        fontSize: 18,
-    },
-    closeButton: {
-        backgroundColor: 'purple',
-        marginTop: 10,
     },
 });

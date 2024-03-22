@@ -1,6 +1,5 @@
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 import React from 'react';
-import { Ionicons } from '@expo/vector-icons'; 
 import colors from '../Global/colors';
 import { fontCollection } from '../Global/fonts';
 
@@ -24,11 +23,10 @@ export default ProductByCategory;
 
 const styles = StyleSheet.create({
   container: {
-    marginTop:10,
-    flexDirection: 'row', 
-    alignItems: 'center', 
+    flexDirection: 'row',
+    alignItems: 'center',
     backgroundColor: colors.base,
-    opacity:0.95,
+    opacity: 0.95,
     width: '90%',
     marginHorizontal: '5%',
     padding: 10,
@@ -36,10 +34,11 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     borderWidth: 1,
     borderColor: 'goldenrod',
+    elevation: 2,
   },
   textContainer: {
     flex: 1,
-    marginLeft: 10, 
+    marginLeft: 10,
   },
   title: {
     fontSize: 18,
@@ -49,7 +48,8 @@ const styles = StyleSheet.create({
   },
   price: {
     fontSize: 20,
-    color: 'gold'
+    color: 'gold',
+    marginTop: 5,
   },
   img: {
     borderRadius: 5,
@@ -57,8 +57,9 @@ const styles = StyleSheet.create({
     height: 90,
   },
   buyButton: {
-    backgroundColor: 'gray',
+    backgroundColor: colors.gold,
     borderRadius: 5,
     padding: 10,
+    marginLeft: 10, 
   },
 });

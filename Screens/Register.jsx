@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, Pressable, Modal } from 'react-native';
+import { StyleSheet, Text, View, Pressable, Modal, Image } from 'react-native';
 import InputForm from '../Components/InputForm';
 import SubmitButton from '../Components/SubmitButton';
 import colors from '../Global/colors';
@@ -8,6 +8,8 @@ import { useDispatch } from 'react-redux';
 import { setUser } from '../features/auth/authSlice';
 import { registerSchema } from '../Validations/authSchema';
 import { deleteSession, insertSession } from '../Data/db';
+
+const Logo = require('../assets/logoPng.png');
 
 const Register = ({ navigation }) => {
     const dispatch = useDispatch();
@@ -19,7 +21,6 @@ const Register = ({ navigation }) => {
     const [errorConfirmPassword, setErrorConfirmPassword] = useState('');
     const [modalVisible, setModalVisible] = useState(false);
     const [modalMessage, setModalMessage] = useState('');
-
     const [triggerRegister] = useRegisterMutation();
 
     const onSubmit = async () => {
@@ -62,6 +63,7 @@ const Register = ({ navigation }) => {
 
     return (
         <View style={styles.main}>
+            <Image source={Logo} style={styles.logo} />
             <View style={styles.container}>
                 <InputForm
                     label="Email"
@@ -69,6 +71,7 @@ const Register = ({ navigation }) => {
                     onChangeText={(t) => setEmail(t)}
                     isSecure={false}
                     error={errorEmail}
+                    style={styles.input}
                 />
                 <InputForm
                     label="Password"
@@ -76,6 +79,7 @@ const Register = ({ navigation }) => {
                     onChangeText={(t) => setPassword(t)}
                     isSecure={true}
                     error={errorPassword}
+                    style={styles.input}
                 />
                 <InputForm
                     label="Confirm Password"
@@ -83,8 +87,9 @@ const Register = ({ navigation }) => {
                     onChangeText={(t) => setConfirmPassword(t)}
                     isSecure={true}
                     error={errorConfirmPassword}
+                    style={styles.input}
                 />
-                <SubmitButton onPress={onSubmit} title="Sign Up" />
+                <SubmitButton onPress={onSubmit} title="Sign Up" style={styles.submitButton} />
                 <Text style={styles.sub}>Already have an account?</Text>
                 <Pressable onPress={() => navigation.navigate('Login')}>
                     <Text style={styles.subLink}>Log in</Text>
@@ -116,11 +121,11 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
+        backgroundColor: colors.lightGray,
     },
     container: {
         width: '90%',
         backgroundColor: colors.base,
-        gap: 15,
         borderRadius: 10,
         justifyContent: 'center',
         alignItems: 'center',
@@ -128,14 +133,31 @@ const styles = StyleSheet.create({
         opacity: 0.9,
         borderColor: colors.gold,
     },
+    input: {
+        width: '80%',
+        backgroundColor: 'white',
+        borderRadius: 15,
+        paddingHorizontal: 15,
+        paddingVertical: 10,
+        marginBottom: 10,
+    },
+    submitButton: {
+        backgroundColor: colors.secondary,
+        borderRadius: 25,
+        padding: 15,
+        marginTop: 20,
+        width: '80%', 
+    },
     sub: {
         fontSize: 18,
         color: 'white',
+        marginTop: 10,
     },
     subLink: {
         fontSize: 18,
-        color: 'gold',
+        color: colors.gold,
         fontWeight: 'bold',
+        marginTop: 5,
     },
     modalContainer: {
         flex: 1,
@@ -157,10 +179,15 @@ const styles = StyleSheet.create({
     modalText: {
         fontSize: 23,
         textAlign: 'center',
-        color:'black'
+        color: 'black',
     },
     modalButtonText: {
-        fontSize: 18, 
-        color:'gold'
-      },
+        fontSize: 18,
+        color: 'gold',
+    },
+    logo: {
+        width: 200, 
+        height: 200,
+        marginBottom: 20,
+    },
 });
