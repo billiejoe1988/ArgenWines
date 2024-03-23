@@ -31,6 +31,8 @@ Embark on a journey of taste and tradition with **ArgenWine** – your ultimate 
 - Expo-Picker-Image: Facilitates loading of profile images.
 - Redux: Centralizes and manages the application's state.
 - RTK Query and Firebase: Performs read/write operations in the database.
+- SQLite: Auth reLoad.
+- Expo-linear-Gradiant: Gradiant Creator.
 
 ## Installation
 1. Clone the repository: `git clone https://github.com/billiejoe1988/ArgenWines`
