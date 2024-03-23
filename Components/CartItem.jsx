@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
         marginBottom: 5
     },
     price: {
-        color: colors.gold,
+        color: 'gold',
         fontSize: 16,
         fontWeight: 'bold'
     },

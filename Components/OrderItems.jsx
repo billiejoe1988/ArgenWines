@@ -1,20 +1,26 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import { Feather } from "@expo/vector-icons";
+import { StyleSheet, Text, View, Pressable } from 'react-native';
 import colors from '../Global/colors';
+import AddButton from './AddButton'; 
+import { useNavigation } from '@react-navigation/native';
 
 const OrderItem = ({ order }) => {
+  const navigation = useNavigation();
+
+  const handlePress = () => {
+    navigation.navigate('OrderDetail', { order });
+  };
 
   return (
-    <View style={styles.card}>
+    <Pressable onPress={handlePress} style={styles.card}>
       <View style={styles.textContainer}>
         <Text style={styles.text}>
           {order.createdAt}
         </Text>
         <Text style={styles.text2}>$ {order.total}</Text>
       </View>
-      <Feather name="search" size={24} color={colors.gold} />
-    </View>
+      <AddButton title="See Detail" onPress={handlePress} />
+    </Pressable>
   );
 }
 
@@ -50,7 +56,7 @@ const styles = StyleSheet.create({
   text2: {
     fontSize: 18,
     fontWeight: 'bold', 
-    color: colors.gold,
+    color: 'gold',
     fontFamily: 'JosefinSans-Bold',
   },
 });

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { StyleSheet, View, Button, Text, Modal, Pressable } from 'react-native';
 import { useDispatch } from 'react-redux';
 import { addCartItem } from '../features/cart/cartSlice';
+import colors from '../Global/colors'
 
 const CounterCart = ({ item }) => {
     const dispatch = useDispatch();
@@ -14,9 +15,9 @@ const CounterCart = ({ item }) => {
 
     return (
         <View style={styles.counterContainer}>
-            <Button color='#6e032e' title='  +  ' onPress={() => handlerAddCartItem(1)} />
+            <Button color={colors.base} title='  +  ' onPress={() => handlerAddCartItem(1)} />
             <Text style={styles.text}>{item.quantity}</Text>
-            <Button color='#6e032e' title='  -  ' onPress={() => handlerAddCartItem(-1)} />
+            <Button color={colors.base} title='  -  ' onPress={() => handlerAddCartItem(-1)} />
             
             <Modal
                 animationType="slide"

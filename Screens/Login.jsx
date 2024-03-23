@@ -131,6 +131,7 @@ const styles = StyleSheet.create({
   loginButton: {
     width: '80%',
     marginTop: 20,
+    color:'white',
   },
   sub: {
     fontSize: 18,
@@ -139,7 +140,7 @@ const styles = StyleSheet.create({
   },
   subLink: {
     fontSize: 18,
-    color: colors.gold,
+    color: 'gold',
     fontWeight: 'bold',
     marginTop: 5,
   },

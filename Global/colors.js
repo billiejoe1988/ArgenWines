@@ -1,8 +1,9 @@
 const colors = {
-    lightGray:"#4b4b4b",
-    base: '#6e032e',
-    secondary: "#6e032e",
-    gold: "#efb810"
+    lightGray:"#865089",
+    base: '#5E296E',
+    secondary: "#865089",
+    gold: "#D49DC0",
+
 }
 
 export default colors

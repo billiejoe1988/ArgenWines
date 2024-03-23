@@ -1,6 +1,7 @@
 import { View, Text } from 'react-native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import Orders from '../Screens/Orders'
+import OrderDetail from '../Screens/OrderDetail'
 import Header from '../Components/Header'
 
 const Stack = createNativeStackNavigator()
@@ -18,6 +19,7 @@ const OrdersStack = () => {
         }}
     >
         <Stack.Screen name='Orders' component={Orders}/>
+        <Stack.Screen name='OrderDetail' component={OrderDetail} />
     </Stack.Navigator>
   )
 }
