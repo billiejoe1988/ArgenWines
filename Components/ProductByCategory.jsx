@@ -10,7 +10,9 @@ const ProductByCategory = ({ item, navigation }) => {
 
   return (
     <TouchableOpacity onPress={handlePress} style={styles.container}>
-      <Image style={styles.img} source={{ uri: item.thumbnail }} resizeMode="cover" />
+      <View style={styles.imageContainer}>
+        <Image style={styles.img} source={{ uri: item.thumbnail }} resizeMode="cover" />
+      </View>
       <View style={styles.textContainer}>
         <Text style={styles.title}>{item.title}</Text>
         <Text style={styles.price}>$ {item.price}</Text>
@@ -23,22 +25,27 @@ export default ProductByCategory;
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: 'row',
+    flexDirection: 'column',
     alignItems: 'center',
     backgroundColor: colors.base,
     opacity: 0.95,
     width: '90%',
     marginHorizontal: '5%',
-    padding: 10,
     marginBottom: 10,
     borderRadius: 5,
     borderWidth: 1,
     borderColor: 'goldenrod',
     elevation: 2,
   },
+  imageContainer: {
+    width: '100%', 
+    borderTopLeftRadius: 5,
+    borderTopRightRadius: 5,
+    overflow: 'hidden', 
+  },
   textContainer: {
-    flex: 1,
-    marginLeft: 10,
+    padding: 10, 
+    width: '100%',
   },
   title: {
     fontSize: 18,
@@ -52,14 +59,8 @@ const styles = StyleSheet.create({
     marginTop: 5,
   },
   img: {
+    width: '100%', 
+    height: 150,
     borderRadius: 5,
-    width: 90,
-    height: 90,
-  },
-  buyButton: {
-    backgroundColor: colors.gold,
-    borderRadius: 5,
-    padding: 10,
-    marginLeft: 10, 
   },
 });

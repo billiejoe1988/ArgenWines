@@ -3,8 +3,6 @@
 
 Indulge in the rich and flavorful world of Argentine wines with **ArgenWine** – your premier destination for experiencing the finest Argentine vintages, meticulously curated for global enthusiasts and connoisseurs.
 
-## Android Studio ##Expo ## React Native ## Redux RKT Query ## FireBase ## SQLite ## React Navigator ## Redux Store
-
 ## 🍇 Discover Distinctive Flavors
 Explore a diverse selection of premium Argentine wines, each bottle telling a unique story of the country's rich viticultural heritage. From the iconic Malbecs to the elegant Torrontés, **ArgenWine** brings you a curated collection that captures the essence of Argentina's renowned wine regions.
 
@@ -24,3 +22,21 @@ Experience swift and efficient shipping to your doorstep. **ArgenWine** collabor
 Become a part of a global community passionate about Argentine wines. Stay updated on the latest releases, exclusive offers, and wine-related events. **ArgenWine** is more than an app; it's a vibrant community that celebrates the love for exceptional Argentine wines.
 
 Embark on a journey of taste and tradition with **ArgenWine** – your ultimate companion for exploring and savoring the best of Argentine wine culture. Download the app now and elevate your wine experience!
+
+## Technologies Used
+- Firebase Authentication: Implements Firebase's authentication system to manage application security.
+- React Native Navigation Stack: Manages navigation between screens.
+- React Native Navigation Bottom Tab: Manages navigation between tabs.
+- Expo-Location: Allows access to and management of user location.
+- Expo-Picker-Image: Facilitates loading of profile images.
+- Redux: Centralizes and manages the application's state.
+- RTK Query and Firebase: Performs read/write operations in the database.
+
+## Installation
+1. Clone the repository: `git clone https://github.com/billiejoe1988/ArgenWines`
+2. Install dependencies: `npm install`
+3. Configure API keys for external services (Expo-Location, Firebase, etc.).
+4. Set up Firebase credentials in your project.
+5. Run the application: `npm start`
+
+### Autor: Mauri Arbelaiz

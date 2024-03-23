@@ -1,7 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, Pressable } from 'react-native';
 import colors from '../Global/colors';
-import AddButton from './AddButton'; 
 import { useNavigation } from '@react-navigation/native';
 
 const OrderItem = ({ order }) => {
@@ -12,15 +11,25 @@ const OrderItem = ({ order }) => {
   };
 
   return (
-    <Pressable onPress={handlePress} style={styles.card}>
+    <View style={styles.card}>
       <View style={styles.textContainer}>
-        <Text style={styles.text}>
-          {order.createdAt}
-        </Text>
-        <Text style={styles.text2}>$ {order.total}</Text>
+        <View style={styles.textItem}>
+          <Text style={styles.text}>OrderID: </Text>
+          <Text style={[styles.text, styles.goldText]}>{order.id}</Text>
+        </View>
+        <View style={styles.textItem}>
+          <Text style={styles.text}>Date: </Text>
+          <Text style={[styles.text, styles.goldText]}>{order.createdAt}</Text>
+        </View>
+        <View style={styles.textItem}>
+          <Text style={styles.text}>Total: </Text>
+          <Text style={[styles.text, styles.goldText]}>$ {order.total}</Text>
+        </View>
       </View>
-      <AddButton title="See Detail" onPress={handlePress} />
-    </Pressable>
+      <Pressable onPress={handlePress} style={styles.button}>
+        <Text style={styles.buttonText}>See Details</Text>
+      </Pressable>
+    </View>
   );
 }
 
@@ -34,29 +43,39 @@ const styles = StyleSheet.create({
     marginVertical: 8,
     padding: 16,
     borderRadius: 10,
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
     borderColor: colors.base,
     elevation: 2, 
     shadowColor: colors.base, 
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.2,
     shadowRadius: 4, 
+    width:'80%',
+    marginLeft:40,
   },
   textContainer: {
-    flex: 1, 
+    marginBottom: 10,
+  },
+  textItem: {
+    flexDirection: 'row',
+    alignItems: 'center',
   },
   text: {
     fontSize: 16,
     color: 'white',
-    marginBottom: 4,
-    fontFamily: 'JosefinSans-Bold',
   },
-  text2: {
-    fontSize: 18,
-    fontWeight: 'bold', 
+  goldText: {
     color: 'gold',
-    fontFamily: 'JosefinSans-Bold',
+  },
+  button: {
+    backgroundColor: colors.base,
+    padding: 12,
+    borderRadius: 10,
+    width: '100%',
+    alignItems: 'center',
+    fontSize: 20,
+  },
+  buttonText: {
+    color: 'white',
+    fontSize: 16,
   },
 });
